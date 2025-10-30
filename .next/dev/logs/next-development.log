@@ -1,14 +1,5 @@
-[00:00:00.993] Server  LOG      ✓ Ready in 601ms
-[00:03:21.916] Server  LOG      ○ Compiling / ...
-[00:03:28.087] Server  ERROR   Invalid DOM property `fill-rule`. Did you mean `fillRule`?
-[00:03:29.097] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? fill-rule fillRule
-[00:03:36.834] Browser ERROR   Invalid DOM property `%s`. Did you mean `%s`? fill-rule fillRule
-[00:08:57.879] Server  LOG      ✓ Compiled in 48ms
-[00:09:32.052] Server  LOG      ✓ Compiled in 31ms
-[00:13:29.049] Server  LOG      ✓ Compiled in 55ms
-[00:32:15.156] Server  LOG      ✓ Compiled in 39ms
-[00:35:46.639] Server  LOG      ✓ Compiled in 319ms
-[00:36:05.287] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:02.338] Server  LOG      ✓ Ready in 1186ms
+[00:00:05.238] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -21,36 +12,42 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <LoadingBoundary name="/" loading={null}>
-      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-          <RedirectBoundary>
-            <RedirectErrorBoundary router={{...}}>
-              <InnerLayoutRouter url="/rupieTimes" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
-                <SegmentViewNode type="page" pagePath="page.js">
-                  <SegmentTrieNode>
-                  <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-                    <Home params={Promise} searchParams={Promise}>
-                      <div className="font-sans ...">
-                        <StockdioWidget>
-                          <section className="w-full bor...">
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/rupieTime..." tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+        <SegmentViewNode type="page" pagePath="contactUs/...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function ContactUs} serverProvidedParams={{...}}>
+            <ContactUs params={Promise} searchParams={Promise}>
+              <div className="min-h-scre...">
+                <div className="py-24 px-4...">
+                  <div className="max-w-7xl ...">
+                    <div>
+                    <div className="grid grid-...">
+                      <div className="bg-white r...">
+                        <form onSubmit={function handleSubmit} className="space-y-6">
+                          <div className="grid grid-...">
                             <div>
-                            <div className="w-full" style={{height:"48px"}}>
-                              <iframe
-+                               id="st_1g1uymui2xi"
--                               id="st_cl9tkf5o7hj"
-                                title="Stockdio Ticker"
-                                frameBorder="0"
-                                scrolling="no"
-                                className="w-full h-full"
-+                               src={"https://api.stockdio.com/visualization/financial/charts/v1/Ticker?app-key=&stoc..."}
--                               src={"https://api.stockdio.com/visualization/financial/charts/v1/Ticker?app-key=&stoc..."}
+                            <div>
+                              <label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required={true}
+                                value=""
+                                onChange={function handleChange}
+                                className="w-full px-5 py-4 bg-gray-100 border border-transparent rounded-lg focus:bg-..."
+                                placeholder="Enter your email"
+-                               style={{background-image:"url(\"data...",background-repeat:"no-repeat",background-size:"20px", ...}}
+-                               data-temp-mail-org="0"
                               >
-                        ...
+                          ...
+                      ...
                 ...
-              ...
+        ...
+      ...
 
-[00:36:20.479] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:05:50.822] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -63,36 +60,43 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <LoadingBoundary name="/" loading={null}>
-      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-          <RedirectBoundary>
-            <RedirectErrorBoundary router={{...}}>
-              <InnerLayoutRouter url="/rupieTimes" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
-                <SegmentViewNode type="page" pagePath="page.js">
-                  <SegmentTrieNode>
-                  <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-                    <Home params={Promise} searchParams={Promise}>
-                      <div className="font-sans ...">
-                        <StockdioWidget>
-                          <section className="w-full bor...">
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/rupieTime..." tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+        <SegmentViewNode type="page" pagePath="contactUs/...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function ContactUs} serverProvidedParams={{...}}>
+            <ContactUs params={Promise} searchParams={Promise}>
+              <div className="min-h-scre...">
+                <div className="py-24 px-4...">
+                  <div className="max-w-7xl ...">
+                    <div>
+                    <div className="grid grid-...">
+                      <div className="bg-white r...">
+                        <form onSubmit={function handleSubmit} className="space-y-6">
+                          <div className="grid grid-...">
                             <div>
-                            <div className="w-full" style={{height:"48px"}}>
-                              <iframe
-+                               id="st_xq1twf8mpz9"
--                               id="st_xengspwe5ep"
-                                title="Stockdio Ticker"
-                                frameBorder="0"
-                                scrolling="no"
-                                className="w-full h-full"
-+                               src={"https://api.stockdio.com/visualization/financial/charts/v1/Ticker?app-key=&stoc..."}
--                               src={"https://api.stockdio.com/visualization/financial/charts/v1/Ticker?app-key=&stoc..."}
+                            <div>
+                              <label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required={true}
+                                value=""
+                                onChange={function handleChange}
+                                className="w-full px-5 py-4 bg-gray-100 border border-transparent rounded-lg focus:bg-..."
+                                placeholder="Enter your email"
+-                               style={{background-image:"url(\"data...",background-repeat:"no-repeat",background-size:"20px", ...}}
+-                               data-temp-mail-org="0"
                               >
-                        ...
+                          ...
+                      ...
                 ...
-              ...
+        ...
+      ...
 
-[00:36:22.676] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:06:15.856] Server  LOG      ✓ Compiled in 94ms
+[00:18:04.573] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -105,36 +109,43 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <LoadingBoundary name="/" loading={null}>
-      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-          <RedirectBoundary>
-            <RedirectErrorBoundary router={{...}}>
-              <InnerLayoutRouter url="/rupieTimes" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
-                <SegmentViewNode type="page" pagePath="page.js">
-                  <SegmentTrieNode>
-                  <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-                    <Home params={Promise} searchParams={Promise}>
-                      <div className="font-sans ...">
-                        <StockdioWidget>
-                          <section className="w-full bor...">
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/rupieTime..." tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+        <SegmentViewNode type="page" pagePath="contactUs/...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function ContactUs} serverProvidedParams={{...}}>
+            <ContactUs params={Promise} searchParams={Promise}>
+              <div className="min-h-scre...">
+                <section className="py-16 sm:p...">
+                  <div className="max-w-7xl ...">
+                    <div>
+                    <div className="grid grid-...">
+                      <div className="bg-white r...">
+                        <form onSubmit={function handleSubmit} className="space-y-6">
+                          <div className="grid grid-...">
                             <div>
-                            <div className="w-full" style={{height:"48px"}}>
-                              <iframe
-+                               id="st_efzgvyk61ch"
--                               id="st_uyst0lcal5"
-                                title="Stockdio Ticker"
-                                frameBorder="0"
-                                scrolling="no"
-                                className="w-full h-full"
-+                               src={"https://api.stockdio.com/visualization/financial/charts/v1/Ticker?app-key=&stoc..."}
--                               src={"https://api.stockdio.com/visualization/financial/charts/v1/Ticker?app-key=&stoc..."}
+                            <div>
+                              <label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required={true}
+                                value=""
+                                onChange={function handleChange}
+                                className="w-full px-5 py-3 sm:py-4 bg-gray-100 border border-transparent rounded-lg f..."
+                                placeholder="Enter your email"
+-                               style={{background-image:"url(\"data...",background-repeat:"no-repeat",background-size:"20px", ...}}
+-                               data-temp-mail-org="0"
                               >
-                        ...
+                          ...
+                      ...
                 ...
-              ...
+        ...
+      ...
 
-[00:37:36.517] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:21:38.257] Server  LOG      ✓ Compiled in 131ms
+[00:25:02.037] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -147,78 +158,369 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <LoadingBoundary name="/" loading={null}>
-      <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
-        <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
-          <RedirectBoundary>
-            <RedirectErrorBoundary router={{...}}>
-              <InnerLayoutRouter url="/rupieTimes" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
-                <SegmentViewNode type="page" pagePath="page.js">
-                  <SegmentTrieNode>
-                  <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-                    <Home params={Promise} searchParams={Promise}>
-                      <div className="font-sans ...">
-                        <StockdioWidget>
-                          <section className="w-full bor...">
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/rupieTime..." tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+        <SegmentViewNode type="page" pagePath="contactUs/...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function ContactUs} serverProvidedParams={{...}}>
+            <ContactUs params={Promise} searchParams={Promise}>
+              <div className="min-h-scre...">
+                <section className="py-16 sm:p...">
+                  <div className="max-w-7xl ...">
+                    <div>
+                    <div className="grid grid-...">
+                      <div className="bg-white r...">
+                        <form onSubmit={function handleSubmit} className="space-y-6">
+                          <div className="grid grid-...">
                             <div>
-                            <div className="w-full" style={{height:"48px"}}>
-                              <iframe
-+                               id="st_367i617n5xb"
--                               id="st_63116j9d6ch"
-                                title="Stockdio Ticker"
-                                frameBorder="0"
-                                scrolling="no"
-                                className="w-full h-full"
-+                               src={"https://api.stockdio.com/visualization/financial/charts/v1/Ticker?app-key=&stoc..."}
--                               src={"https://api.stockdio.com/visualization/financial/charts/v1/Ticker?app-key=&stoc..."}
+                            <div>
+                              <label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required={true}
+                                value=""
+                                onChange={function handleChange}
+                                className="w-full px-5 py-3 sm:py-4 bg-gray-100 border border-transparent rounded-lg f..."
+                                placeholder="Enter your email"
+-                               style={{background-image:"url(\"data...",background-repeat:"no-repeat",background-size:"20px", ...}}
+-                               data-temp-mail-org="0"
                               >
-                        ...
+                          ...
+                      ...
                 ...
-              ...
+        ...
+      ...
 
-[00:38:18.031] Server  LOG      ✓ Compiled in 33ms
-[00:46:33.044] Server  LOG      ✓ Compiled in 26ms
-[00:50:55.910] Server  LOG      ✓ Compiled in 46ms
-[00:55:20.985] Server  LOG      ✓ Compiled in 35ms
-[00:55:21.310] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
-[00:55:21.314] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
-[00:55:22.774] Server  LOG      ✓ Compiled in 143ms
-[00:56:33.696] Server  LOG      ✓ Compiled in 50ms
-[00:58:10.006] Server  LOG      ✓ Compiled in 24ms
-[00:58:13.008] Server  LOG      ✓ Compiled in 24ms
-[00:58:13.305] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
-[00:58:13.305] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
-[00:58:16.103] Server  LOG      ✓ Compiled in 218ms
-[00:59:08.453] Server  LOG      ✓ Compiled in 27ms
-[00:59:23.483] Server  LOG      ✓ Compiled in 29ms
-[00:59:25.644] Server  LOG      ✓ Compiled in 22ms
-[00:59:45.140] Server  LOG      ✓ Compiled in 25ms
-[00:59:45.310] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
-[00:59:45.310] Browser ERROR   An empty string ("") was passed to the %s attribute. This may cause the browser to download the whole page again over the network. To fix this, either do not render the element at all or pass null to %s instead of an empty string. src src
-[00:59:46.429] Server  LOG      ✓ Compiled in 23ms
-[01:05:12.541] Server  LOG      ✓ Compiled in 41ms
-[01:05:15.783] Browser ERROR   Error executing Stockdio method: {}
-[01:05:17.307] Browser ERROR   Error executing Stockdio method: {}
-[01:05:18.291] Browser ERROR   Error executing Stockdio method: {}
-[01:05:22.753] Browser ERROR   Error executing Stockdio method: {}
-[01:05:43.712] Browser ERROR   Error executing Stockdio method: {}
-[01:05:51.518] Browser ERROR   Error executing Stockdio method: {}
-[01:05:55.072] Browser ERROR   Error executing Stockdio method: {}
-[01:07:39.158] Browser ERROR   Error executing Stockdio method: {}
-[01:08:38.209] Server  LOG      ✓ Compiled in 160ms
-[01:08:48.143] Browser ERROR   Error executing Stockdio method: {}
-[01:08:57.585] Browser ERROR   Error executing Stockdio method: {}
-[01:10:35.234] Server  LOG      ✓ Compiled in 67ms
-[01:14:03.520] Server  LOG      ✓ Compiled in 23ms
-[01:21:28.336] Server  LOG      ✓ Compiled in 49ms
-[01:21:40.405] Server  LOG      ✓ Compiled in 26ms
-[01:23:57.309] Server  LOG      ✓ Compiled in 95ms
-[01:24:05.378] Server  LOG      ✓ Compiled in 33ms
-[01:24:10.250] Server  LOG      ✓ Compiled in 73ms
-[01:24:17.352] Server  LOG      ✓ Compiled in 77ms
-[01:24:21.954] Server  LOG      ✓ Compiled in 85ms
-[01:26:02.141] Server  LOG      ✓ Compiled in 25ms
-[01:27:39.737] Server  LOG      ✓ Compiled in 117ms
-[01:28:15.687] Server  LOG      ✓ Compiled in 115ms
-[01:28:21.988] Server  LOG      ✓ Compiled in 184ms
-[01:28:26.029] Server  LOG      ✓ Compiled in 94ms
+[00:26:35.052] Server  LOG      ✓ Compiled in 38ms
+[00:28:42.723] Server  LOG      ✓ Compiled in 72ms
+[00:28:43.250] Browser ERROR   ./src/app/contactUs/page.js:235:15
+Parsing ecmascript source code failed
+  233 |
+  234 |           </div>
+> 235 |         </div>
+      |               ^
+> 236 |       </section>
+      | ^^^^^^^
+  237 |
+  238 |       {/* SECTION 2: MAP */}
+  239 |       <section className="py-16 sm:py-16 bg-white">
+
+Expected '</', got 'jsx text (
+      )'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/contactUs/page.js [Client Component Browser]
+    ./src/app/contactUs/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/contactUs/page.js [Client Component SSR]
+    ./src/app/contactUs/page.js [Server Component]
+[00:28:43.250] Browser ERROR   ./src/app/contactUs/page.js:235:15
+Parsing ecmascript source code failed
+  233 |
+  234 |           </div>
+> 235 |         </div>
+      |               ^
+> 236 |       </section>
+      | ^^^^^^^
+  237 |
+  238 |       {/* SECTION 2: MAP */}
+  239 |       <section className="py-16 sm:py-16 bg-white">
+
+Expected '</', got 'jsx text (
+      )'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/contactUs/page.js [Client Component Browser]
+    ./src/app/contactUs/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/contactUs/page.js [Client Component SSR]
+    ./src/app/contactUs/page.js [Server Component]
+[00:28:52.250] Browser ERROR   ./src/app/contactUs/page.js:235:15
+Parsing ecmascript source code failed
+  233 |
+  234 |           </div>
+> 235 |         </div>
+      |               ^
+> 236 |       </section>
+      | ^^^^^^^
+  237 |
+  238 |       {/* SECTION 2: MAP */}
+  239 |       <section className="py-16 sm:py-16 bg-white">
+
+Expected '</', got 'jsx text (
+      )'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/contactUs/page.js [Client Component Browser]
+    ./src/app/contactUs/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/contactUs/page.js [Client Component SSR]
+    ./src/app/contactUs/page.js [Server Component]
+[00:28:52.250] Browser ERROR   ./src/app/contactUs/page.js:235:15
+Parsing ecmascript source code failed
+  233 |
+  234 |           </div>
+> 235 |         </div>
+      |               ^
+> 236 |       </section>
+      | ^^^^^^^
+  237 |
+  238 |       {/* SECTION 2: MAP */}
+  239 |       <section className="py-16 sm:py-16 bg-white">
+
+Expected '</', got 'jsx text (
+      )'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/contactUs/page.js [Client Component Browser]
+    ./src/app/contactUs/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/contactUs/page.js [Client Component SSR]
+    ./src/app/contactUs/page.js [Server Component]
+[00:31:03.344] Server  LOG      ✓ Compiled in 55ms
+[00:31:44.158] Server  LOG      ✓ Compiled in 395ms
+[00:32:03.313] Server  LOG      ✓ Compiled in 55ms
+[00:32:36.870] Server  LOG      ✓ Compiled in 31ms
+[00:32:44.103] Server  LOG      ✓ Compiled in 35ms
+[00:39:25.941] Server  LOG      ✓ Compiled in 408ms
+[00:39:55.684] Server  LOG      ✓ Compiled in 34ms
+[00:39:59.418] Server  LOG      ✓ Compiled in 55ms
+[00:40:24.245] Server  LOG      ✓ Compiled in 36ms
+[00:43:38.586] Server  LOG      ✓ Compiled in 85ms
+[00:43:54.902] Server  LOG      ✓ Compiled in 253ms
+[00:44:10.118] Server  LOG      ✓ Compiled in 40ms
+[00:44:22.421] Server  LOG      ✓ Compiled in 27ms
+[00:44:33.698] Server  LOG      ✓ Compiled in 64ms
+[00:44:35.049] Server  LOG      ✓ Compiled in 132ms
+[00:44:42.534] Server  LOG      ✓ Compiled in 33ms
+[00:44:56.131] Server  LOG      ✓ Compiled in 28ms
+[00:46:12.647] Server  LOG      ✓ Compiled in 45ms
+[00:46:20.560] Server  LOG      ✓ Compiled in 39ms
+[00:46:34.391] Server  LOG      ✓ Compiled in 31ms
+[00:47:29.755] Server  LOG      ✓ Compiled in 25ms
+[00:47:37.439] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/rupieTime..." tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+        <SegmentViewNode type="page" pagePath="contactUs/...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function ContactUs} serverProvidedParams={{...}}>
+            <ContactUs params={Promise} searchParams={Promise}>
+              <div className="min-h-scre...">
+                <div className="py-24 px-4...">
+                  <div className="max-w-7xl ...">
+                    <div>
+                    <div className="grid grid-...">
+                      <div className="bg-white r...">
+                        <form onSubmit={function handleSubmit} className="space-y-6">
+                          <div className="grid grid-...">
+                            <div>
+                            <div>
+                              <label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required={true}
+                                value=""
+                                onChange={function handleChange}
+                                className="w-full px-5 py-4 bg-gray-100 border border-transparent rounded-lg focus:bg-..."
+                                placeholder="Enter your email"
+-                               style={{background-image:"url(\"data...",background-repeat:"no-repeat",background-size:"20px", ...}}
+-                               data-temp-mail-org="0"
+                              >
+                          ...
+                      ...
+                ...
+        ...
+      ...
+
+[00:48:08.514] Server  LOG      ✓ Compiled in 77ms
+[00:48:31.824] Server  LOG      ✓ Compiled in 167ms
+[00:49:20.232] Server  LOG      ✓ Compiled in 29ms
+[00:49:22.466] Server  LOG      ✓ Compiled in 34ms
+[00:49:55.776] Server  LOG      ✓ Compiled in 34ms
+[00:49:58.757] Server  LOG      ✓ Compiled in 33ms
+[00:52:30.061] Server  LOG      ✓ Compiled in 30ms
+[00:52:31.151] Server  LOG      ✓ Compiled in 59ms
+[00:52:39.982] Server  LOG      ✓ Compiled in 112ms
+[00:52:53.086] Server  LOG      ✓ Compiled in 363ms
+[00:53:47.819] Server  LOG      ✓ Compiled in 34ms
+[00:53:50.641] Server  LOG      ✓ Compiled in 30ms
+[00:53:53.238] Server  LOG      ✓ Compiled in 29ms
+[00:54:22.151] Server  LOG      ✓ Compiled in 42ms
+[00:55:54.003] Server  LOG      ✓ Compiled in 30ms
+[00:55:54.250] Browser ERROR   ./src/app/contactUs/page.js:124:39
+Parsing ecmascript source code failed
+  122 |                   <div>
+  123 |                     <label
+> 124 |                       htmlFor="subject"
+      |                                       ^
+  125 |                       className="block text-sm font-semibold text-gray-700 mb-2"
+  126 |                     >
+  127 |                       Subject *
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/contactUs/page.js [Client Component Browser]
+    ./src/app/contactUs/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/contactUs/page.js [Client Component SSR]
+    ./src/app/contactUs/page.js [Server Component]
+[00:55:54.250] Browser ERROR   ./src/app/contactUs/page.js:124:39
+Parsing ecmascript source code failed
+  122 |                   <div>
+  123 |                     <label
+> 124 |                       htmlFor="subject"
+      |                                       ^
+  125 |                       className="block text-sm font-semibold text-gray-700 mb-2"
+  126 |                     >
+  127 |                       Subject *
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/contactUs/page.js [Client Component Browser]
+    ./src/app/contactUs/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/contactUs/page.js [Client Component SSR]
+    ./src/app/contactUs/page.js [Server Component]
+[00:55:58.041] Server  LOG      ✓ Compiled in 31ms
+[00:58:26.897] Server  LOG      ✓ Compiled in 32ms
+[00:58:35.979] Server  LOG      ✓ Compiled in 34ms
+[00:58:39.069] Server  LOG      ✓ Compiled in 32ms
+[00:58:41.337] Server  LOG      ✓ Compiled in 36ms
+[00:58:43.427] Server  LOG      ✓ Compiled in 26ms
+[00:58:47.282] Server  LOG      ✓ Compiled in 27ms
+[00:58:48.674] Server  LOG      ✓ Compiled in 54ms
+[00:58:57.182] Server  LOG      ✓ Compiled in 35ms
+[00:59:02.330] Server  LOG      ✓ Compiled in 34ms
+[00:59:05.420] Server  LOG      ✓ Compiled in 26ms
+[00:59:06.852] Server  LOG      ✓ Compiled in 37ms
+[01:01:46.301] Server  LOG      ✓ Compiled in 69ms
+[01:01:52.907] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/rupieTime..." tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+        <SegmentViewNode type="page" pagePath="contactUs/...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function ContactUs} serverProvidedParams={{...}}>
+            <ContactUs params={Promise} searchParams={Promise}>
+              <div className="min-h-scre...">
+                <div className="py-24 px-4...">
+                  <div className="max-w-7xl ...">
+                    <div>
+                    <div className="grid grid-...">
+                      <div className="backdrop-b...">
+                        <form onSubmit={function handleSubmit} className="space-y-6">
+                          <div className="grid grid-...">
+                            <div>
+                            <div>
+                              <label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required={true}
+                                value=""
+                                onChange={function handleChange}
+                                className="w-full px-5 py-4 bg-gray-100 border border-transparent rounded-lg focus:bg-..."
+                                placeholder="Enter your email"
+-                               style={{background-image:"url(\"data...",background-repeat:"no-repeat",background-size:"20px", ...}}
+-                               data-temp-mail-org="0"
+                              >
+                          ...
+                      ...
+                ...
+        ...
+      ...
+
+[01:02:31.966] Browser LOG     Form submitted: {"email":"pokece9335@dropeso.com","message":"redsfsd sdf","name":"test","phone":"9512365444","subject":"test"}
+[01:03:02.307] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/rupieTime..." tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+        <SegmentViewNode type="page" pagePath="contactUs/...">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function ContactUs} serverProvidedParams={{...}}>
+            <ContactUs params={Promise} searchParams={Promise}>
+              <div className="min-h-scre...">
+                <div className="py-24 px-4...">
+                  <div className="max-w-7xl ...">
+                    <div>
+                    <div className="grid grid-...">
+                      <div className="backdrop-b...">
+                        <form onSubmit={function handleSubmit} className="space-y-6">
+                          <div className="grid grid-...">
+                            <div>
+                            <div>
+                              <label>
+                              <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required={true}
+                                value=""
+                                onChange={function handleChange}
+                                className="w-full px-5 py-4 bg-gray-100 border border-transparent rounded-lg focus:bg-..."
+                                placeholder="Enter your email"
+-                               style={{background-image:"url(\"data...",background-repeat:"no-repeat",background-size:"20px", ...}}
+-                               data-temp-mail-org="0"
+                              >
+                          ...
+                      ...
+                ...
+        ...
+      ...
+
+[01:06:08.168] Server  LOG      ✓ Compiled in 41ms
+[01:06:19.350] Server  LOG      ✓ Compiled in 28ms
+[01:06:22.575] Server  LOG      ✓ Compiled in 368ms
