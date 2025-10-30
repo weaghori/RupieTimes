@@ -7,7 +7,7 @@ module.exports = mod;
 }),
 "[project]/src/app/assets/logo.png (static in ecmascript, tag client)", ((__turbopack_context__) => {
 
-__turbopack_context__.v("./_next/static/media/logo.b69eee79.png");}),
+__turbopack_context__.v("/rupieTimes/_next/static/media/logo.b69eee79.png");}),
 "[project]/src/app/assets/logo.png.mjs { IMAGE => \"[project]/src/app/assets/logo.png (static in ecmascript, tag client)\" } [app-ssr] (structured image object with data url, ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
