@@ -1,2 +1,120 @@
-[00:00:03.240] Server  LOG      ✓ Ready in 2.5s
-[00:00:15.269] Server  LOG      ○ Compiling / ...
+[00:00:03.080] Server  LOG      ✓ Ready in 2.3s
+[00:00:08.396] Server  LOG      ○ Compiling /contactUs ...
+[00:00:11.775] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/contactUs" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="scroll-pt-20">
+                          <body className="geist_2ae4...">
+                            <Navbar>
+                              <header className="fixed inse...">
+                                <nav className="mx-auto fl..." aria-label="Primary">
+                                  <div>
+                                  <div>
+                                  <div className="flex items...">
+                                    <LinkComponent>
+                                    <button
++                                     id="_R_lb_"
+-                                     id="_R_1lb_"
+                                      aria-label="Open menu"
+                                      aria-expanded={false}
++                                     aria-controls="_R_lbH1_"
+-                                     aria-controls="_R_1lbH1_"
+                                      onClick={function onClick}
+                                      className="inline-flex lg:hidden items-center justify-center rounded-md p-2 text..."
+                                    >
+                                <div
++                                 id="_R_lbH1_"
+-                                 id="_R_1lbH1_"
+                                  className="lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ea..."
+                                >
+                            ...
+                  ...
+
+[00:07:47.599] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.js">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="scroll-pt-20">
+                          <body className="geist_2ae4...">
+                            <Navbar>
+                              <header className="fixed inse...">
+                                <nav className="mx-auto fl..." aria-label="Primary">
+                                  <div>
+                                  <div>
+                                  <div className="flex items...">
+                                    <LinkComponent>
+                                    <button
++                                     id="_R_lb_"
+-                                     id="_R_1lb_"
+                                      aria-label="Open menu"
+                                      aria-expanded={false}
++                                     aria-controls="_R_lbH1_"
+-                                     aria-controls="_R_1lbH1_"
+                                      onClick={function onClick}
+                                      className="inline-flex lg:hidden items-center justify-center rounded-md p-2 text..."
+                                    >
+                                <div
++                                 id="_R_lbH1_"
+-                                 id="_R_1lbH1_"
+                                  className="lg:hidden overflow-hidden transition-[max-height,opacity] duration-300 ea..."
+                                >
+                            ...
+                  ...
+
