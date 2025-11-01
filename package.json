@@ -10,8 +10,10 @@
     "export": "next export"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "chart.js": "^4.5.1",
     "framer-motion": "^12.23.24",
+    "jsonwebtoken": "^9.0.2",
     "lightweight-charts": "^5.0.9",
     "mongoose": "^8.19.2",
     "next": "16.0.1",
