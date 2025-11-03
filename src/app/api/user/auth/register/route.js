@@ -11,12 +11,27 @@ export async function POST(req) {
     await connectDB();
 
     const body = await req.json();
-    const { name, email, mobile, password } = body;
+    const { 
+      name, 
+      email, 
+      mobile, 
+      password,
+      address 
+    } = body;
 
-    // Validate input
+    // Validate required fields
     if (!name || !email || !mobile || !password) {
       return NextResponse.json(
-        { success: false, message: "All fields are required" },
+        { success: false, message: "Name, email, mobile and password are required" },
+        { status: 400 }
+      );
+    }
+
+    // Validate address fields
+    if (!address || !address.country || !address.state || !address.district || 
+        !address.city || !address.pincode || !address.address) {
+      return NextResponse.json(
+        { success: false, message: "All address fields are required" },
         { status: 400 }
       );
     }
@@ -28,7 +43,10 @@ export async function POST(req) {
 
     if (existingUser) {
       return NextResponse.json(
-        { success: false, message: "User already exists" },
+        { 
+          success: false, 
+          message: "User with this email or mobile number already exists" 
+        },
         { status: 400 }
       );
     }
@@ -36,15 +54,24 @@ export async function POST(req) {
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create user
+    // Create user with address
     const newUser = await User.create({
       name,
       email,
       mobile,
       password: hashedPassword,
+      address: {
+        country: address.country,
+        state: address.state,
+        district: address.district,
+        city: address.city,
+        village: address.village || "", // optional field
+        pincode: address.pincode,
+        address: address.address
+      }
     });
 
-    // Generate JWT token
+    // Generate JWT token with 1 year expiration
     const token = jwt.sign(
       {
         id: newUser._id,
@@ -52,7 +79,7 @@ export async function POST(req) {
         role: newUser.role,
       },
       JWT_SECRET,
-      { expiresIn: "7d" }
+      { expiresIn: "365d" } // 1 year expiration
     );
 
     // Prepare safe user data (excluding password)
@@ -62,8 +89,7 @@ export async function POST(req) {
       email: newUser.email,
       mobile: newUser.mobile,
       role: newUser.role,
-      subscriptionPlan: newUser.subscriptionPlan,
-      subscriptionStatus: newUser.subscriptionStatus,
+      address: newUser.address
     };
 
     // Create response
@@ -74,20 +100,36 @@ export async function POST(req) {
       token,
     });
 
-    // Set secure cookie for token
+    // Set secure cookie for token with 1 year expiration
     response.cookies.set("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60, // 7 days
+      maxAge: 365 * 24 * 60 * 60, // 1 year in seconds
       path: "/",
     });
 
     return response;
   } catch (error) {
     console.error("Registration error:", error);
+    
+    // Handle duplicate key errors
+    if (error.code === 11000) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: "User with this email or mobile already exists" 
+        },
+        { status: 400 }
+      );
+    }
+    
     return NextResponse.json(
-      { success: false, message: "Server error", error: error.message },
+      { 
+        success: false, 
+        message: "Server error", 
+        error: error.message 
+      },
       { status: 500 }
     );
   }
