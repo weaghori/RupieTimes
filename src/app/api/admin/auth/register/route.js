@@ -1,3 +1,4 @@
+// app/api/admin/auth/register/route.js
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
@@ -10,10 +11,10 @@ export async function POST(req) {
   try {
     await connectDB();
     const body = await req.json();
-    const { username, email, mobile, password } = body;
+    const { name, email, mobile, password } = body;
 
     // Validate input
-    if (!username || !email || !mobile || !password) {
+    if (!name || !email || !mobile || !password) {
       return NextResponse.json(
         { success: false, message: "All fields are required" },
         { status: 400 }
@@ -22,7 +23,7 @@ export async function POST(req) {
 
     // Check if admin already exists
     const existingAdmin = await Admin.findOne({
-      $or: [{ email }, { mobile }, { username }],
+      $or: [{ email }, { mobile }],
     });
 
     if (existingAdmin) {
@@ -37,25 +38,30 @@ export async function POST(req) {
 
     // Create new admin
     const newAdmin = await Admin.create({
-      username,
+      name,
       email,
       mobile,
       password: hashedPassword,
     });
 
-    // Generate JWT token
+    // Generate JWT token with 1 year expiration
     const token = jwt.sign(
-      { id: newAdmin._id, role: "admin" },
+      { 
+        id: newAdmin._id, 
+        email: newAdmin.email,
+        role: "admin" 
+      },
       JWT_SECRET,
-      { expiresIn: "7d" }
+      { expiresIn: "365d" }
     );
 
     const adminData = {
       id: newAdmin._id,
-      username: newAdmin.username,
+      name: newAdmin.name,
       email: newAdmin.email,
       mobile: newAdmin.mobile,
       role: newAdmin.role,
+      isActive: newAdmin.isActive
     };
 
     const response = NextResponse.json({
@@ -65,18 +71,30 @@ export async function POST(req) {
       token,
     });
 
-    // Set cookie
+    // Set cookie with 1 year expiration
     response.cookies.set("admin_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60,
+      maxAge: 365 * 24 * 60 * 60,
       path: "/",
     });
 
     return response;
   } catch (error) {
     console.error("Admin registration error:", error);
+    
+    // Handle duplicate key errors
+    if (error.code === 11000) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: "Admin with this email or mobile already exists" 
+        },
+        { status: 400 }
+      );
+    }
+    
     return NextResponse.json(
       { success: false, message: "Server error", error: error.message },
       { status: 500 }
