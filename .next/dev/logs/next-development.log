@@ -1,6 +1,7 @@
-[00:00:01.597] Server  LOG      ✓ Ready in 1278ms
-[00:00:38.771] Server  ERROR   (node:12856) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[00:00:01.099] Server  LOG      ✓ Ready in 764ms
+[00:00:20.093] Server  ERROR   (node:24332) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
 (Use `node --trace-warnings ...` to show where the warning was created)
-[00:00:38.774] Server  ERROR   (node:12856) [MONGOOSE] Warning: Duplicate schema index on {"username":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
-[00:00:38.775] Server  ERROR   (node:12856) [MONGOOSE] Warning: Duplicate schema index on {"mobile":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
-[00:00:39.656] Server  LOG     MongoDB Connected Successfully
+[00:00:20.096] Server  ERROR   (node:24332) [MONGOOSE] Warning: Duplicate schema index on {"mobile":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[00:00:20.841] Server  LOG     MongoDB Connected Successfully
+[00:04:24.240] Server  ERROR   (node:24332) [MONGOOSE] Warning: Duplicate schema index on {"email":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.
+[00:04:24.241] Server  ERROR   (node:24332) [MONGOOSE] Warning: Duplicate schema index on {"mobile":1} found. This is often due to declaring an index using both "index: true" and "schema.index()". Please remove the duplicate index definition.

@@ -2,10 +2,9 @@ import mongoose from 'mongoose';
 
 const adminSchema = new mongoose.Schema(
   {
-    username: {
+    name: {
       type: String,
-      required: [true, 'Please provide a username'],
-      unique: true,
+      required: [true, 'Please provide a name'],
       trim: true,
     },
     email: {
@@ -48,7 +47,6 @@ const adminSchema = new mongoose.Schema(
 
 // Indexes for better query performance
 adminSchema.index({ email: 1 });
-adminSchema.index({ username: 1 });
 adminSchema.index({ mobile: 1 });
 
 // Auto-update last login timestamp

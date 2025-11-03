@@ -11,10 +11,10 @@ export async function POST(req) {
   try {
     await connectDB();
     const body = await req.json();
-    const { username, email, mobile, password } = body;
+    const { name, email, mobile, password } = body;
 
     // Validate input
-    if (!username || !email || !mobile || !password) {
+    if (!name || !email || !mobile || !password) {
       return NextResponse.json(
         { success: false, message: "All fields are required" },
         { status: 400 }
@@ -23,7 +23,7 @@ export async function POST(req) {
 
     // Check if admin already exists
     const existingAdmin = await Admin.findOne({
-      $or: [{ email }, { mobile }, { username }],
+      $or: [{ email }, { mobile }],
     });
 
     if (existingAdmin) {
@@ -38,7 +38,7 @@ export async function POST(req) {
 
     // Create new admin
     const newAdmin = await Admin.create({
-      username,
+      name,
       email,
       mobile,
       password: hashedPassword,
@@ -52,12 +52,12 @@ export async function POST(req) {
         role: "admin" 
       },
       JWT_SECRET,
-      { expiresIn: "365d" } // 1 year
+      { expiresIn: "365d" }
     );
 
     const adminData = {
       id: newAdmin._id,
-      username: newAdmin.username,
+      name: newAdmin.name,
       email: newAdmin.email,
       mobile: newAdmin.mobile,
       role: newAdmin.role,
@@ -76,7 +76,7 @@ export async function POST(req) {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 365 * 24 * 60 * 60, // 1 year
+      maxAge: 365 * 24 * 60 * 60,
       path: "/",
     });
 
@@ -89,7 +89,7 @@ export async function POST(req) {
       return NextResponse.json(
         { 
           success: false, 
-          message: "Admin with this email, mobile or username already exists" 
+          message: "Admin with this email or mobile already exists" 
         },
         { status: 400 }
       );

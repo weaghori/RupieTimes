@@ -12,20 +12,18 @@ export async function POST(req) {
     await connectDB();
 
     const body = await req.json();
-    const { email, username, password } = body;
+    const { email, password } = body;
 
-    // Validate input - admin can login with email or username
-    if (!password || (!email && !username)) {
+    // Validate input
+    if (!email || !password) {
       return NextResponse.json(
-        { success: false, message: "Email/username and password are required" },
+        { success: false, message: "Email and password are required" },
         { status: 400 }
       );
     }
 
-    // Find admin by email or username
-    const admin = await Admin.findOne({
-      $or: [{ email }, { username }],
-    }).select('+password'); // Include password field
+    // Find admin by email
+    const admin = await Admin.findOne({ email }).select('+password');
 
     if (!admin) {
       return NextResponse.json(
@@ -69,7 +67,7 @@ export async function POST(req) {
     // Prepare safe admin data
     const adminData = {
       id: admin._id,
-      username: admin.username,
+      name: admin.name,
       email: admin.email,
       mobile: admin.mobile,
       role: admin.role,
