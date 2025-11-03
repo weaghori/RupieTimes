@@ -11,57 +11,56 @@ export async function POST(req) {
     await connectDB();
 
     const body = await req.json();
-    const { emailOrMobile, password } = body;
+    const { email, mobile, password } = body;
 
-    // Validate fields
-    if (!emailOrMobile || !password) {
+    // Validate input - user can login with email or mobile
+    if (!password || (!email && !mobile)) {
       return NextResponse.json(
-        { success: false, message: "Email/Mobile and password are required" },
+        { success: false, message: "Email or mobile and password are required" },
         { status: 400 }
       );
     }
 
     // Find user by email or mobile
     const user = await User.findOne({
-      $or: [{ email: emailOrMobile }, { mobile: emailOrMobile }],
-    }).select("+password"); // Include password field for comparison
+      $or: [{ email }, { mobile }],
+    }).select('+password'); // Include password field for verification
 
     if (!user) {
       return NextResponse.json(
-        { success: false, message: "Invalid email or mobile" },
-        { status: 400 }
+        { success: false, message: "Invalid credentials" },
+        { status: 401 }
       );
     }
 
-    // Compare password
+    // Verify password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return NextResponse.json(
-        { success: false, message: "Invalid password" },
-        { status: 400 }
+        { success: false, message: "Invalid credentials" },
+        { status: 401 }
       );
     }
 
-    // Generate JWT token
+    // Generate JWT token with 1 year expiration
     const token = jwt.sign(
-      { id: user._id, email: user.email, role: user.role },
+      {
+        id: user._id,
+        email: user.email,
+        role: user.role,
+      },
       JWT_SECRET,
-      { expiresIn: "7d" }
+      { expiresIn: "365d" } // 1 year expiration
     );
 
-    // Update last login
-    user.lastLogin = new Date();
-    await user.save();
-
-    // Prepare safe user data
+    // Prepare safe user data (excluding password)
     const userData = {
       id: user._id,
       name: user.name,
       email: user.email,
       mobile: user.mobile,
       role: user.role,
-      subscriptionPlan: user.subscriptionPlan,
-      subscriptionStatus: user.subscriptionStatus,
+      address: user.address
     };
 
     // Create response
@@ -72,12 +71,12 @@ export async function POST(req) {
       token,
     });
 
-    // Set JWT token in cookie
+    // Set secure cookie for token with 1 year expiration
     response.cookies.set("token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60, // 7 days
+      maxAge: 365 * 24 * 60 * 60, // 1 year in seconds
       path: "/",
     });
 
@@ -85,7 +84,11 @@ export async function POST(req) {
   } catch (error) {
     console.error("Login error:", error);
     return NextResponse.json(
-      { success: false, message: "Server error", error: error.message },
+      { 
+        success: false, 
+        message: "Server error", 
+        error: error.message 
+      },
       { status: 500 }
     );
   }
