@@ -1,3 +1,4 @@
+// app/api/admin/auth/register/route.js
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
@@ -43,11 +44,15 @@ export async function POST(req) {
       password: hashedPassword,
     });
 
-    // Generate JWT token
+    // Generate JWT token with 1 year expiration
     const token = jwt.sign(
-      { id: newAdmin._id, role: "admin" },
+      { 
+        id: newAdmin._id, 
+        email: newAdmin.email,
+        role: "admin" 
+      },
       JWT_SECRET,
-      { expiresIn: "7d" }
+      { expiresIn: "365d" } // 1 year
     );
 
     const adminData = {
@@ -56,6 +61,7 @@ export async function POST(req) {
       email: newAdmin.email,
       mobile: newAdmin.mobile,
       role: newAdmin.role,
+      isActive: newAdmin.isActive
     };
 
     const response = NextResponse.json({
@@ -65,18 +71,30 @@ export async function POST(req) {
       token,
     });
 
-    // Set cookie
+    // Set cookie with 1 year expiration
     response.cookies.set("admin_token", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
-      maxAge: 7 * 24 * 60 * 60,
+      maxAge: 365 * 24 * 60 * 60, // 1 year
       path: "/",
     });
 
     return response;
   } catch (error) {
     console.error("Admin registration error:", error);
+    
+    // Handle duplicate key errors
+    if (error.code === 11000) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: "Admin with this email, mobile or username already exists" 
+        },
+        { status: 400 }
+      );
+    }
+    
     return NextResponse.json(
       { success: false, message: "Server error", error: error.message },
       { status: 500 }
