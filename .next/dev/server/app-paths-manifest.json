@@ -1,7 +1,9 @@
 {
-  "/api/admin/auth/delete/route": "app/api/admin/auth/delete/route.js",
   "/api/admin/auth/login/route": "app/api/admin/auth/login/route.js",
-  "/api/admin/auth/profile/route": "app/api/admin/auth/profile/route.js",
-  "/api/admin/auth/register/route": "app/api/admin/auth/register/route.js",
-  "/api/admin/auth/update/route": "app/api/admin/auth/update/route.js"
+  "/api/admin/auth/logout/route": "app/api/admin/auth/logout/route.js",
+  "/api/admin/products/[id]/route": "app/api/admin/products/[id]/route.js",
+  "/api/admin/products/add/route": "app/api/admin/products/add/route.js",
+  "/api/admin/products/delete/route": "app/api/admin/products/delete/route.js",
+  "/api/admin/products/route": "app/api/admin/products/route.js",
+  "/api/admin/products/update/route": "app/api/admin/products/update/route.js"
 }
