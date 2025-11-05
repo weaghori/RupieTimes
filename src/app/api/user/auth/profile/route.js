@@ -1,4 +1,3 @@
-// app/api/user/profile/route.js
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import connectDB from "@/app/lib/utils/dbConnect";
@@ -47,6 +46,7 @@ export async function GET(req) {
       email: user.email,
       mobile: user.mobile,
       role: user.role,
+      isActive: user.isActive,
       address: user.address,
       createdAt: user.createdAt,
       updatedAt: user.updatedAt
