@@ -27,6 +27,10 @@ const userSchema = new mongoose.Schema(
       enum: ['user'],
       default: 'user',
     },
+    isActive: {
+      type: Boolean,
+      default: true,
+    },
     address: {
       country: {
         type: String,
