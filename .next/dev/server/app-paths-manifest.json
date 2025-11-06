@@ -1,7 +1,6 @@
 {
-  "/api/admin/auth/delete/route": "app/api/admin/auth/delete/route.js",
-  "/api/admin/auth/login/route": "app/api/admin/auth/login/route.js",
-  "/api/admin/auth/profile/route": "app/api/admin/auth/profile/route.js",
-  "/api/admin/auth/register/route": "app/api/admin/auth/register/route.js",
-  "/api/admin/auth/update/route": "app/api/admin/auth/update/route.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/contactUs/page": "app/contactUs/page.js",
+  "/page": "app/page.js"
 }
