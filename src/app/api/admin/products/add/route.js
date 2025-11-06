@@ -34,10 +34,34 @@ export async function POST(request) {
     const category = formData.get('category') || '';
     const tags = formData.get('tags') || '';
 
-    // Variant prices (required)
-    const price3Months = formData.get('price3Months') || '0';
-    const price6Months = formData.get('price6Months') || '0';
-    const price1Year = formData.get('price1Year') || '0';
+    // Get dynamic variants from form data
+    const variantsData = [];
+    let variantIndex = 0;
+    
+    // Loop through all variants in form data
+    while (true) {
+      const duration = formData.get(`variants[${variantIndex}][duration]`);
+      const durationMonths = formData.get(`variants[${variantIndex}][durationMonths]`);
+      const price = formData.get(`variants[${variantIndex}][price]`);
+      const description = formData.get(`variants[${variantIndex}][description]`) || '';
+
+      // Stop if no more variants found
+      if (!duration && !durationMonths && !price) {
+        break;
+      }
+
+      // Validate required fields for this variant
+      if (duration && durationMonths && price) {
+        variantsData.push({
+          duration: duration.trim(),
+          durationMonths: parseInt(durationMonths),
+          price: parseFloat(price),
+          description: description.trim()
+        });
+      }
+      
+      variantIndex++;
+    }
 
     if (!file) {
       return NextResponse.json({ 
@@ -54,12 +78,28 @@ export async function POST(request) {
       }, { status: 400 });
     }
 
-    // Validate at least one variant has price
-    if (!price3Months && !price6Months && !price1Year) {
+    // Validate at least one variant
+    if (variantsData.length === 0) {
       return NextResponse.json({ 
         success: false,
-        error: 'At least one variant price is required (3 months, 6 months, or 1 year)' 
+        error: 'At least one pricing variant is required' 
       }, { status: 400 });
+    }
+
+    // Validate variant data
+    for (const variant of variantsData) {
+      if (variant.durationMonths < 1) {
+        return NextResponse.json({ 
+          success: false,
+          error: 'Duration months must be at least 1' 
+        }, { status: 400 });
+      }
+      if (variant.price < 0) {
+        return NextResponse.json({ 
+          success: false,
+          error: 'Price cannot be negative' 
+        }, { status: 400 });
+      }
     }
 
     // Convert file to buffer
@@ -75,41 +115,6 @@ export async function POST(request) {
     // Generate unique filename
     const timestamp = Date.now();
     const filename = `${timestamp}-${file.name}`;
-
-    // Prepare variants array
-    const variants = [];
-
-    // Add 3 months variant if price provided
-    if (price3Months && parseFloat(price3Months) > 0) {
-      variants.push({
-        duration: '3 months',
-        price: parseFloat(price3Months)
-      });
-    }
-
-    // Add 6 months variant if price provided
-    if (price6Months && parseFloat(price6Months) > 0) {
-      variants.push({
-        duration: '6 months',
-        price: parseFloat(price6Months)
-      });
-    }
-
-    // Add 1 year variant if price provided
-    if (price1Year && parseFloat(price1Year) > 0) {
-      variants.push({
-        duration: '1 year',
-        price: parseFloat(price1Year)
-      });
-    }
-
-    // Validate we have at least one variant
-    if (variants.length === 0) {
-      return NextResponse.json({ 
-        success: false,
-        error: 'At least one valid variant price is required' 
-      }, { status: 400 });
-    }
 
     // Upload to GridFS
     const uploadStream = bucket.openUploadStream(filename, {
@@ -140,7 +145,7 @@ export async function POST(request) {
             fullDescription,
             category,
             tags: tags ? tags.split(',').map(tag => tag.trim()).filter(tag => tag) : [],
-            variants,
+            variants: variantsData,
             metadata: {
               gridfsId: uploadStream.id.toString(),
               originalName: file.name,

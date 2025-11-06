@@ -1,3 +1,4 @@
+// src/app/api/admin/products/update/route.js
 import { NextResponse } from 'next/server';
 import connectDB from '@/app/lib/utils/dbConnect';
 import Product from "@/app/lib/models/product";
@@ -33,11 +34,36 @@ export async function PUT(request) {
     const category = formData.get('category') || '';
     const tags = formData.get('tags') || '';
     const file = formData.get('image');
+    const isActive = formData.get('isActive');
 
-    // Variant prices
-    const price3Months = formData.get('price3Months');
-    const price6Months = formData.get('price6Months');
-    const price1Year = formData.get('price1Year');
+    // Get dynamic variants from form data
+    const variantsData = [];
+    let variantIndex = 0;
+    
+    // Loop through all variants in form data
+    while (true) {
+      const duration = formData.get(`variants[${variantIndex}][duration]`);
+      const durationMonths = formData.get(`variants[${variantIndex}][durationMonths]`);
+      const price = formData.get(`variants[${variantIndex}][price]`);
+      const description = formData.get(`variants[${variantIndex}][description]`) || '';
+
+      // Stop if no more variants found
+      if (!duration && !durationMonths && !price) {
+        break;
+      }
+
+      // Validate required fields for this variant
+      if (duration && durationMonths && price) {
+        variantsData.push({
+          duration: duration.trim(),
+          durationMonths: parseInt(durationMonths),
+          price: parseFloat(price),
+          description: description.trim()
+        });
+      }
+      
+      variantIndex++;
+    }
 
     if (!productId) {
       return NextResponse.json({ 
@@ -67,50 +93,30 @@ export async function PUT(request) {
       'metadata.updatedAt': new Date()
     };
 
-    // Handle variants update if any variant price is provided
-    if (price3Months || price6Months || price1Year) {
-      const updatedVariants = [...existingProduct.variants];
+    // Handle isActive status
+    if (isActive !== null) {
+      updateData.isActive = isActive === 'true';
+    }
+
+    // Handle variants update
+    if (variantsData.length > 0) {
+      // Validate variant data
+      for (const variant of variantsData) {
+        if (variant.durationMonths < 1) {
+          return NextResponse.json({ 
+            success: false,
+            error: 'Duration months must be at least 1' 
+          }, { status: 400 });
+        }
+        if (variant.price < 0) {
+          return NextResponse.json({ 
+            success: false,
+            error: 'Price cannot be negative' 
+          }, { status: 400 });
+        }
+      }
       
-      // Update 3 months variant
-      if (price3Months) {
-        const variantIndex = updatedVariants.findIndex(v => v.duration === '3 months');
-        if (variantIndex !== -1) {
-          updatedVariants[variantIndex].price = parseFloat(price3Months);
-        } else {
-          updatedVariants.push({
-            duration: '3 months',
-            price: parseFloat(price3Months)
-          });
-        }
-      }
-
-      // Update 6 months variant
-      if (price6Months) {
-        const variantIndex = updatedVariants.findIndex(v => v.duration === '6 months');
-        if (variantIndex !== -1) {
-          updatedVariants[variantIndex].price = parseFloat(price6Months);
-        } else {
-          updatedVariants.push({
-            duration: '6 months',
-            price: parseFloat(price6Months)
-          });
-        }
-      }
-
-      // Update 1 year variant
-      if (price1Year) {
-        const variantIndex = updatedVariants.findIndex(v => v.duration === '1 year');
-        if (variantIndex !== -1) {
-          updatedVariants[variantIndex].price = parseFloat(price1Year);
-        } else {
-          updatedVariants.push({
-            duration: '1 year',
-            price: parseFloat(price1Year)
-          });
-        }
-      }
-
-      updateData.variants = updatedVariants;
+      updateData.variants = variantsData;
     }
 
     // If new file is uploaded
@@ -165,7 +171,7 @@ export async function PUT(request) {
     const updatedProduct = await Product.findByIdAndUpdate(
       productId,
       updateData,
-      { new: true }
+      { new: true, runValidators: true }
     );
 
     console.log('Product updated by admin:', authResult.admin.email);
@@ -173,7 +179,21 @@ export async function PUT(request) {
     return NextResponse.json({
       success: true,
       message: 'Product updated successfully',
-      product: updatedProduct
+      product: {
+        id: updatedProduct._id,
+        filename: updatedProduct.filename,
+        heading: updatedProduct.heading,
+        shortDescription: updatedProduct.shortDescription,
+        fullDescription: updatedProduct.fullDescription,
+        category: updatedProduct.category,
+        tags: updatedProduct.tags,
+        variants: updatedProduct.variants,
+        basePrice: updatedProduct.basePrice,
+        isActive: updatedProduct.isActive,
+        uploadDate: updatedProduct.uploadDate,
+        updatedAt: updatedProduct.updatedAt,
+        metadata: updatedProduct.metadata
+      }
     });
 
   } catch (error) {

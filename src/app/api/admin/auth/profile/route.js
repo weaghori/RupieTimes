@@ -1,4 +1,4 @@
-// app/api/admin/auth/profile/route.js
+// src/app/api/admin/auth/profile/route.js
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import connectDB from "@/app/lib/utils/dbConnect";
