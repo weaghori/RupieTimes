@@ -1,6 +1,1 @@
-{
-  "/api/user/auth/delete/route": "app/api/user/auth/delete/route.js",
-  "/api/user/auth/login/route": "app/api/user/auth/login/route.js",
-  "/api/user/auth/register/route": "app/api/user/auth/register/route.js",
-  "/api/user/auth/update/route": "app/api/user/auth/update/route.js"
-}
+{}
