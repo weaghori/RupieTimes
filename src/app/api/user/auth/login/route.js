@@ -1,3 +1,4 @@
+// src/app/api/user/auth/login/route.js
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
@@ -33,6 +34,17 @@ export async function POST(req) {
       );
     }
 
+    // Check if user account is active
+    if (user.isActive === false) {
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: "Your account has been deactivated by the administrator. Please contact support." 
+        },
+        { status: 401 }
+      );
+    }
+
     // Verify password
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
@@ -60,6 +72,7 @@ export async function POST(req) {
       email: user.email,
       mobile: user.mobile,
       role: user.role,
+      isActive: user.isActive,
       address: user.address
     };
 

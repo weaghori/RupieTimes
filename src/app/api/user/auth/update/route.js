@@ -1,4 +1,4 @@
-// app/api/user/update/route.js
+// src/app/api/user/auth/update/route.js
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
