@@ -1,3 +1,36 @@
+import Link from "next/link";
+
+export function AboutCTA() {
+  return (
+    <section>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+        <div className="rounded-2xl bg-primary px-8 py-12 text-white shadow-lg">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl font-semibold">Ready to explore Rupie Times?</h2>
+            <p className="mt-3 text-white/80">
+              Join our trial program to sample premium insights, alerts, and community discussions.
+            </p>
+          </div>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              href="/trial"
+              className="inline-flex rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-primary shadow-sm transition hover:opacity-90"
+            >
+              Start Free Trial
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex rounded-md border border-white/60 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Talk to Sales
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 "use client";
 
 export const AboutCTA = () => {
