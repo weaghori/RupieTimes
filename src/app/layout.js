@@ -23,11 +23,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-pt-20">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}>
         <Navbar />
-        <main className="pt-16 sm:pt-18 lg:pt-20">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
   );
 }
-
-

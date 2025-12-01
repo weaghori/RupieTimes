@@ -21,3 +21,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Add padding to main content when nav is fixed */
+body.nav-fixed main {
+  padding-top: 4rem; /* 64px for h-16 */
+}
+
+@media (min-width: 640px) {
+  body.nav-fixed main {
+    padding-top: 4.5rem; /* 72px for sm:h-18 */
+  }
+}
+
+@media (min-width: 1024px) {
+  body.nav-fixed main {
+    padding-top: 5rem; /* 80px for lg:h-20 */
+  }
+}

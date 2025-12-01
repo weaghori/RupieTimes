@@ -1,3 +1,49 @@
+const items = [
+  {
+    title: "Our Mission",
+    description:
+      "Equip every investor with actionable research, intuitive tools, and educational resources tailored to their goals.",
+  },
+  {
+    title: "Our Vision",
+    description:
+      "Build the most trusted hub for market intelligence in emerging economies, setting the standard for transparency.",
+  },
+  {
+    title: "Our Approach",
+    description:
+      "We blend market data, expert commentary, and AI insights to deliver clear, concise guidance you can rely on.",
+  },
+];
+
+export function MissionVision() {
+  return (
+    <section>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div className="max-w-2xl">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-primary">Mission &amp; Vision</h2>
+          <p className="mt-3 text-slate-600">
+            Our roadmap is shaped by real investor challenges. We focus on clarity, accountability,
+            and long-term value.
+          </p>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {items.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
+            >
+              <h3 className="text-xl font-semibold text-slate-900">{item.title}</h3>
+              <p className="mt-3 text-slate-600">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // components/MissionVision.jsx
 export const MissionVision = () => {
     return (
