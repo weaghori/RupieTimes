@@ -1,2 +1,229 @@
-[00:00:04.745] Server  LOG      ✓ Ready in 4s
-[00:00:08.057] Server  LOG      ○ Compiling / ...
+[00:00:01.093] Server  LOG      ✓ Ready in 761ms
+[00:00:09.799] Server  LOG      ○ Compiling / ...
+[00:00:12.057] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:01:14.493] Server  LOG      ✓ Compiled in 88ms
+[00:10:59.979] Server  LOG      ✓ Compiled in 631ms
+[00:15:04.398] Server  LOG      ✓ Compiled in 834ms
+[00:17:45.451] Server  LOG      ✓ Compiled in 455ms
+[00:18:07.697] Server  LOG      ✓ Compiled in 183ms
+[00:18:46.103] Server  LOG      ✓ Compiled in 90ms
+[00:19:01.381] Server  LOG      ✓ Compiled in 74ms
+[00:19:36.228] Server  LOG      ✓ Compiled in 307ms
+[00:19:48.884] Server  LOG      ✓ Compiled in 71ms
+[00:23:53.443] Server  LOG      ✓ Compiled in 574ms
+[00:32:19.351] Server  LOG      ✓ Compiled in 926ms
+[00:33:53.179] Server  LOG      ✓ Compiled in 1316ms
+[00:34:58.414] Server  LOG      ✓ Compiled in 326ms
+[00:35:17.135] Server  LOG      ✓ Compiled in 189ms
+[00:36:36.036] Server  LOG      ✓ Compiled in 412ms
+[00:58:54.944] Server  LOG      ✓ Compiled in 545ms
+[00:59:39.022] Server  LOG      ✓ Compiled in 399ms
+[01:00:04.755] Server  LOG      ✓ Compiled in 219ms
+[01:01:08.217] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[01:01:08.217] Browser ERROR   uncaughtError: NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node.
+[01:01:09.414] Browser WARN    Image with src "https://picsum.photos/seed/2/400/300" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:01:09.961] Browser WARN    Image with src "https://picsum.photos/seed/1/400/300" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:01:28.691] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
++                     <div hidden={true}>
+-                     {"\n        "}
+                    ...
+                  ...
+
+[01:01:41.801] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head headCacheNode={{lazyData:null, ...}}>
+                    <__next_viewport_boundary__>
+                    <Next.Metadata>
++                     <div hidden={true}>
+-                     {"\n        "}
+                    ...
+                  ...
+
+[01:01:49.169] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:16:13.893] Server  LOG      ✓ Compiled in 726ms
+[01:17:52.497] Server  LOG      ✓ Compiled in 392ms
+[01:50:56.420] Server  LOG      ✓ Compiled in 1939ms
+[01:53:08.036] Server  LOG      ✓ Compiled in 355ms
+[01:54:20.267] Server  LOG      ✓ Compiled in 324ms
+[01:54:34.873] Server  LOG      ✓ Compiled in 68ms
+[01:58:29.369] Server  LOG      ✓ Compiled in 283ms
+[01:58:40.304] Server  LOG      ✓ Compiled in 184ms
+[01:58:55.444] Server  LOG      ✓ Compiled in 351ms
+[01:59:08.703] Server  LOG      ✓ Compiled in 115ms
+[01:59:25.240] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <AppDevOverlayErrorBoundary globalError={[...]}>
+      <ReplaySsrOnlyErrors>
+      <DevRootHTTPAccessFallbackBoundary>
+        <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+          <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <Head>
+                <__next_root_layout_boundary__>
+                  <SegmentViewNode type="layout" pagePath="layout.js">
+                    <SegmentTrieNode>
+                    <link>
+                    <script>
+                    <script>
+                    <script>
+                    <script>
+                    <script>
+                    <RootLayout>
+                      <html lang="en" className="scroll-pt-20">
+                        <body className="geist_2ae4...">
+                          <Navbar>
+                            <div>
+                            <header className="sticky top...">
+                              <nav className="mx-auto fl..." aria-label="Primary">
+                                <div className="flex lg:hi...">
+                                  <button
++                                   id="_R_lb_"
+-                                   id="_R_1lb_"
+                                    aria-label="Open menu"
+                                    aria-expanded={false}
++                                   aria-controls="_R_lbH1_"
+-                                   aria-controls="_R_1lbH1_"
+                                    onClick={function onClick}
+                                    className="flex items-center justify-center rounded-md p-2 text-black hover:bg-sla..."
+                                  >
+                                  ...
+                                ...
+                          ...
+                ...
+
+[01:59:25.948] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:59:45.151] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <AppDevOverlayErrorBoundary globalError={[...]}>
+      <ReplaySsrOnlyErrors>
+      <DevRootHTTPAccessFallbackBoundary>
+        <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+          <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+            <RedirectBoundary>
+              <RedirectErrorBoundary router={{...}}>
+                <Head>
+                <__next_root_layout_boundary__>
+                  <SegmentViewNode type="layout" pagePath="layout.js">
+                    <SegmentTrieNode>
+                    <link>
+                    <script>
+                    <script>
+                    <script>
+                    <script>
+                    <script>
+                    <RootLayout>
+                      <html lang="en" className="scroll-pt-20">
+                        <body className="geist_2ae4...">
+                          <Navbar>
+                            <div>
+                            <header className="sticky top...">
+                              <nav className="mx-auto fl..." aria-label="Primary">
+                                <div className="flex lg:hi...">
+                                  <button
++                                   id="_R_lb_"
+-                                   id="_R_1lb_"
+                                    aria-label="Open menu"
+                                    aria-expanded={false}
++                                   aria-controls="_R_lbH1_"
+-                                   aria-controls="_R_1lbH1_"
+                                    onClick={function onClick}
+                                    className="flex items-center justify-center rounded-md p-2 text-black hover:bg-sla..."
+                                  >
+                                  ...
+                                ...
+                          ...
+                ...
+
+[01:59:45.869] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:00:04.517] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:00:24.988] Server  LOG      ✓ Compiled in 702ms
+[02:00:41.146] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:04:36.030] Server  LOG      ✓ Compiled in 287ms
+[02:04:54.994] Server  LOG      ✓ Compiled in 250ms
+[02:20:59.614] Server  LOG      ✓ Compiled in 1062ms
+[02:22:21.723] Server  LOG      ✓ Compiled in 814ms
+[02:35:46.676] Server  LOG      ✓ Compiled in 1ms
+[02:38:32.259] Server  LOG      ✓ Compiled in 9ms
+[02:38:50.611] Browser WARN    Image with src "https://placehold.co/600x600/e2e8f0/1e293b?text=Business+Featured" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:42:59.030] Server  LOG      ✓ Compiled in 1444ms
+[02:43:04.027] Server  LOG      ✓ Compiled in 95ms
+[02:44:09.265] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:44:49.709] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[02:44:56.827] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
