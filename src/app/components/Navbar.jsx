@@ -6,7 +6,7 @@ import { useEffect, useId, useState } from "react";
 import logo from "../assets/logo.svg";
 
 const NAV_ITEMS = [
-  { name: "Rupie Talk", href: "/news" },
+  { name: "Rupie Talk", href: "/rupiesTimeTalk" },
   { name: "Advertise With US", href: "/news" },
   { name: "Our Products", href: "/insights" },
   { name: "About Us", href: "/about" },

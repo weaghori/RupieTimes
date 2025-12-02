@@ -227,3 +227,32 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [02:44:56.827] Browser WARN    Image with src "https://picsum.photos/1200/600" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[06:17:59.313] Server  LOG      ✓ Compiled in 290ms
+[06:18:40.812] Server  LOG      ✓ Compiled in 141ms
+[06:38:47.654] Server  LOG      ✓ Compiled in 272ms
+[06:39:32.231] Server  LOG      ✓ Compiled in 545ms
+[07:03:07.440] Server  LOG      ✓ Compiled in 862ms
+[07:05:00.301] Server  LOG      ✓ Compiled in 622ms
+[07:12:06.990] Server  LOG      ✓ Compiled in 488ms
+[07:14:12.740] Server  LOG      ✓ Compiled in 1239ms
+[07:15:34.887] Server  LOG      ✓ Compiled in 590ms
+[07:15:43.606] Browser WARN    Image with src "https://picsum.photos/1600/300" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[07:16:13.488] Server  LOG      ✓ Compiled in 201ms
+[07:16:13.912] Browser ERROR   uncaughtError: TypeError: Failed to construct 'Image': Please use the 'new' operator, this DOM object constructor cannot be called as a function.
+[07:16:29.379] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[07:16:29.380] Server  LOG      ✓ Compiled in 135ms
+[07:16:35.435] Browser WARN    Image with src "https://picsum.photos/1600/300" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[07:16:58.770] Server  LOG      ✓ Compiled in 240ms
+[07:16:59.036] Browser ERROR   uncaughtError: ReferenceError: iconSrc is not defined
+[07:17:37.420] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[07:17:37.421] Server  LOG      ✓ Compiled in 191ms
+[07:17:47.249] Browser WARN    Image with src "https://picsum.photos/1600/300" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[07:30:21.401] Server  LOG      ✓ Compiled in 830ms
+[22:27:28.479] Browser WARN    Image with src "https://picsum.photos/1600/300" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[22:48:48.552] Server  LOG      ✓ Compiled in 712ms
+[22:49:04.992] Server  LOG      ✓ Compiled in 252ms
+[22:49:30.066] Server  LOG      ✓ Compiled in 187ms
