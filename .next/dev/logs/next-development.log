@@ -256,3 +256,46 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [22:48:48.552] Server  LOG      ✓ Compiled in 712ms
 [22:49:04.992] Server  LOG      ✓ Compiled in 252ms
 [22:49:30.066] Server  LOG      ✓ Compiled in 187ms
+[22:57:39.784] Server  LOG      ✓ Compiled in 1069ms
+[22:57:47.868] Server  LOG      ✓ Compiled in 596ms
+[22:57:48.635] Browser ERROR   ./src/app/rupiesTimeTalk/page.js:9:14
+Ecmascript file had an error
+   7 | import sharpIcon from "../assets/sharp.svg";
+   8 |
+>  9 | export const metadata = {
+     |              ^^^^^^^^
+  10 |     title: "Rupie Times Talk",
+  11 |     description: "Latest market news and updates from Rupie Times Talk.",
+  12 | };
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./src/app/rupiesTimeTalk/page.js [Client Component Browser]
+    ./src/app/rupiesTimeTalk/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/rupiesTimeTalk/page.js [Client Component SSR]
+    ./src/app/rupiesTimeTalk/page.js [Server Component]
+[22:58:19.978] Browser ERROR   ./src/app/rupiesTimeTalk/page.js:9:14
+Ecmascript file had an error
+   7 | import sharpIcon from "../assets/sharp.svg";
+   8 |
+>  9 | export const metadata = {
+     |              ^^^^^^^^
+  10 |     title: "Rupie Times Talk",
+  11 |     description: "Latest market news and updates from Rupie Times Talk.",
+  12 | };
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./src/app/rupiesTimeTalk/page.js [Client Component Browser]
+    ./src/app/rupiesTimeTalk/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/rupiesTimeTalk/page.js [Client Component SSR]
+    ./src/app/rupiesTimeTalk/page.js [Server Component]
+[22:58:22.584] Server  LOG      ✓ Compiled in 247ms
