@@ -40,21 +40,11 @@ const OuterArticleCard = ({
         </span>
       </div>
 
-      {/* Row 2: Description & Category */}
-      <div className="flex flex-col md:flex-row justify-between items-start gap-4 mb-6">
+      {/* Row 2: Description */}
+      <div className="mb-6">
         <p className="text-gray-600 text-sm leading-relaxed max-w-3xl">
           {description}
         </p>
-        <span 
-          className="inline-flex items-center justify-center px-4 text-xs font-bold rounded-[10px] whitespace-nowrap"
-          style={{ 
-            backgroundColor: '#ffec9f80', 
-            color: '#C0934B',
-            height: '22px'
-          }}
-        >
-          {category}
-        </span>
       </div>
 
       {/* Row 3: Meta & Action */}
@@ -81,14 +71,27 @@ const OuterArticleCard = ({
           </div>
         </div>
 
-        {/* Read Full Article Link */}
-        <Link 
-          href={link} 
-          className="flex items-center text-sm font-bold hover:underline transition-all self-end md:self-auto"
-          style={{ color: '#00301F' }}
-        >
-          Read Full Article <FaArrowRight className="ml-2 w-3 h-3" />
-        </Link>
+        {/* Category & Read Full Article Link */}
+        <div className="flex items-center justify-between w-full md:w-auto gap-4">
+            <span 
+              className="inline-flex items-center justify-center px-4 text-xs font-bold rounded-[10px] whitespace-nowrap"
+              style={{ 
+                backgroundColor: '#ffec9f80', 
+                color: '#C0934B',
+                height: '22px'
+              }}
+            >
+              {category}
+            </span>
+
+            <Link 
+              href={link} 
+              className="flex items-center text-sm font-bold hover:underline transition-all"
+              style={{ color: '#00301F' }}
+            >
+              Read Full Article <FaArrowRight className="ml-2 w-3 h-3" />
+            </Link>
+        </div>
       </div>
 
     </div>
