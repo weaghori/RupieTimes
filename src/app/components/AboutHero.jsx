@@ -1,25 +1,3 @@
-export function AboutHero() {
-  return (
-    <section className="bg-primary/5">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-wide text-accent">
-            About Rupie Times
-          </p>
-          <h1 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-primary">
-            Democratizing Market Intelligence for Every Investor
-          </h1>
-          <p className="mt-6 text-lg text-slate-600">
-            We believe access to reliable analysis should be universal. Rupie Times combines data,
-            education, and community insights to empower decision making from first trade to
-            advanced portfolios.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // components/AboutHero.jsx
 import Image from 'next/image';
 import abouthirograph from '@/app/assets/abouthirograph.jpg';
