@@ -44,7 +44,20 @@ export const ARTICLES_DATA = [
                     ]
                 }
             }
-        ]
+        ],
+        footer: {
+            authors: [
+                { name: "Lucy Brewster", url: "#" },
+                { name: "Sissy Yan", url: "#" },
+                { name: "Mark Reeth", url: "#" }
+            ],
+            signup: {
+                text: "Was This Email Forwarded To You? Sign Up",
+                linkText: "Here",
+                url: "#"
+            },
+            copyright: "© 2025 RUPIE TIMES All rights reserved."
+        }
     },
     {
         id: 2,
@@ -65,7 +78,20 @@ export const ARTICLES_DATA = [
                     image: "https://placehold.co/800x400/e2e8f0/1e293b?text=Analysis+Chart"
                 }
             }
-        ]
+        ],
+        footer: {
+            authors: [
+                { name: "Lucy Brewster", url: "#" },
+                { name: "Sissy Yan", url: "#" },
+                { name: "Mark Reeth", url: "#" }
+            ],
+            signup: {
+                text: "Was This Email Forwarded To You? Sign Up",
+                linkText: "Here",
+                url: "#"
+            },
+            copyright: "© 2025 RUPIE TIMES All rights reserved."
+        }
     },
     {
         id: 3,
@@ -78,7 +104,20 @@ export const ARTICLES_DATA = [
         sectionCount: "2 section",
         link: "/rupiesTimeTalk/3",
         thumbnail: "https://placehold.co/800x400/e2e8f0/1e293b?text=Crypto+Trends",
-        sections: []
+        sections: [],
+        footer: {
+            authors: [
+                { name: "Lucy Brewster", url: "#" },
+                { name: "Sissy Yan", url: "#" },
+                { name: "Mark Reeth", url: "#" }
+            ],
+            signup: {
+                text: "Was This Email Forwarded To You? Sign Up",
+                linkText: "Here",
+                url: "#"
+            },
+            copyright: "© 2025 RUPIE TIMES All rights reserved."
+        }
     },
     {
         id: 4,
@@ -91,7 +130,20 @@ export const ARTICLES_DATA = [
         sectionCount: "4 section",
         link: "/rupiesTimeTalk/4",
         thumbnail: "https://placehold.co/800x400/e2e8f0/1e293b?text=Stock+Updates",
-        sections: []
+        sections: [],
+        footer: {
+            authors: [
+                { name: "Lucy Brewster", url: "#" },
+                { name: "Sissy Yan", url: "#" },
+                { name: "Mark Reeth", url: "#" }
+            ],
+            signup: {
+                text: "Was This Email Forwarded To You? Sign Up",
+                linkText: "Here",
+                url: "#"
+            },
+            copyright: "© 2025 RUPIE TIMES All rights reserved."
+        }
     },
     {
         id: 5,
@@ -104,7 +156,20 @@ export const ARTICLES_DATA = [
         sectionCount: "6 section",
         link: "/rupiesTimeTalk/5",
         thumbnail: "https://placehold.co/800x400/e2e8f0/1e293b?text=Global+Economy",
-        sections: []
+        sections: [],
+        footer: {
+            authors: [
+                { name: "Lucy Brewster", url: "#" },
+                { name: "Sissy Yan", url: "#" },
+                { name: "Mark Reeth", url: "#" }
+            ],
+            signup: {
+                text: "Was This Email Forwarded To You? Sign Up",
+                linkText: "Here",
+                url: "#"
+            },
+            copyright: "© 2025 RUPIE TIMES All rights reserved."
+        }
     },
     {
         id: 6,
@@ -117,6 +182,19 @@ export const ARTICLES_DATA = [
         sectionCount: "3 section",
         link: "/rupiesTimeTalk/6",
         thumbnail: "https://placehold.co/800x400/e2e8f0/1e293b?text=Tech+Innovations",
-        sections: []
+        sections: [],
+        footer: {
+            authors: [
+                { name: "Lucy Brewster", url: "#" },
+                { name: "Sissy Yan", url: "#" },
+                { name: "Mark Reeth", url: "#" }
+            ],
+            signup: {
+                text: "Was This Email Forwarded To You? Sign Up",
+                linkText: "Here",
+                url: "#"
+            },
+            copyright: "© 2025 RUPIE TIMES All rights reserved."
+        }
     }
 ];

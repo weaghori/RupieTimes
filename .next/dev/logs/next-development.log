@@ -27,3 +27,823 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [01:56:12.505] Browser WARN    Image with src "https://picsum.photos/1600/300" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [01:56:35.060] Browser WARN    Image with src "http://localhost:3000/_next/static/media/sharp.f23e5487.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[02:00:21.243] Server  LOG      ✓ Compiled in 589ms
+[02:55:05.170] Server  LOG      ✓ Compiled in 654ms
+[03:17:16.480] Server  LOG      ✓ Compiled in 700ms
+[03:17:17.376] Browser ERROR   ./src/app/rupiesTimeTalk/data.js:47:13
+Parsing ecmascript source code failed
+  45 |                 }
+  46 |             }
+> 47 |             }
+     |             ^
+  48 | ],
+  49 |     footer: {
+  50 |         authors: [
+
+Expected ',', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/rupiesTimeTalk/data.js [Client Component Browser]
+    ./src/app/rupiesTimeTalk/ArticleList.jsx [Client Component Browser]
+    ./src/app/rupiesTimeTalk/ArticleList.jsx [Server Component]
+    ./src/app/rupiesTimeTalk/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/rupiesTimeTalk/data.js [Client Component SSR]
+    ./src/app/rupiesTimeTalk/ArticleList.jsx [Client Component SSR]
+    ./src/app/rupiesTimeTalk/ArticleList.jsx [Server Component]
+    ./src/app/rupiesTimeTalk/page.js [Server Component]
+[03:17:41.167] Server  LOG      ✓ Compiled in 1821ms
+[03:17:41.326] Browser ERROR   ./src/app/rupiesTimeTalk/data.js:47:13
+Parsing ecmascript source code failed
+  45 |                 }
+  46 |             }
+> 47 |             }
+     |             ^
+  48 | ],
+  49 |     footer: {
+  50 |         authors: [
+
+Expected ',', got '}'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/rupiesTimeTalk/data.js [Client Component Browser]
+    ./src/app/rupiesTimeTalk/ArticleList.jsx [Client Component Browser]
+    ./src/app/rupiesTimeTalk/ArticleList.jsx [Server Component]
+    ./src/app/rupiesTimeTalk/page.js [Server Component]
+
+  Client Component SSR:
+    ./src/app/rupiesTimeTalk/data.js [Client Component SSR]
+    ./src/app/rupiesTimeTalk/ArticleList.jsx [Client Component SSR]
+    ./src/app/rupiesTimeTalk/ArticleList.jsx [Server Component]
+    ./src/app/rupiesTimeTalk/page.js [Server Component]
+[03:18:07.602] Server  LOG      ✓ Compiled in 119ms
+[22:44:57.121] Server  LOG      ○ Compiling /about ...
+[22:44:57.618] Server  ERROR    ⨯ ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+
+
+
+./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+
+
+
+./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+
+
+
+./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+
+
+
+./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js
+
+
+[22:44:58.149] Browser ERROR   ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:44:58.149] Browser ERROR   ./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:44:58.149] Browser ERROR   ./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+[22:44:58.149] Browser ERROR   ./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+[22:44:58.149] Browser ERROR   ./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js
+[22:44:58.149] Browser ERROR   ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:44:58.149] Browser ERROR   ./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:44:58.149] Browser ERROR   ./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+[22:44:58.149] Browser ERROR   ./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+[22:44:58.150] Browser ERROR   ./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+[22:45:00.622] Browser ERROR   ./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js
+[22:45:01.251] Browser ERROR   ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:01.251] Browser ERROR   ./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:01.251] Browser ERROR   ./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+[22:45:01.251] Browser ERROR   ./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+[22:45:01.251] Browser ERROR   ./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js
+[22:45:01.442] Server  ERROR    ⨯ ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+
+
+
+./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+
+
+
+./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+
+
+
+./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+
+
+
+./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js
+
+
+[22:45:01.986] Browser ERROR   uncaughtError: Error: ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+
+
+[22:45:02.132] Browser ERROR   ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:02.132] Browser ERROR   ./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:02.133] Browser ERROR   ./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+[22:45:02.133] Browser ERROR   ./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+[22:45:02.133] Browser ERROR   ./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js
+[22:45:02.278] Browser ERROR   ./src/app/components/AboutCTA.jsx:34:1
+Ecmascript file had an error
+  32 | }
+  33 |
+> 34 | "use client";
+     | ^^^^^^^^^^^^^
+  35 |
+  36 | export const AboutCTA = () => {
+  37 |   return (
+
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:02.278] Browser ERROR   ./src/app/components/AboutCTA.jsx:36:14
+Ecmascript file had an error
+  34 | "use client";
+  35 |
+> 36 | export const AboutCTA = () => {
+     |              ^^^^^^^^
+  37 |   return (
+  38 |     <section className="relative py-12 lg:py-16 xl:py-24 bg-gradient-to-br from-white via-gray-50 to-gray-100/70 overflow-hidden">
+  39 |       {/* Background Elements */}
+
+the name `AboutCTA` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutCTA.jsx
+    ./src/app/about/page.js
+[22:45:02.278] Browser ERROR   ./src/app/components/AboutHero.jsx:27:14
+Ecmascript file had an error
+  25 | import abouthirograph from '@/app/assets/abouthirograph.jpg';
+  26 |
+> 27 | export const AboutHero = () => {
+     |              ^^^^^^^^^
+  28 |   return (
+  29 |     <section className="relative py-12 lg:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
+  30 |       {/* Background Elements */}
+
+the name `AboutHero` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/AboutHero.jsx
+    ./src/app/about/page.js
+[22:45:02.278] Browser ERROR   ./src/app/components/CoreValues.jsx:41:14
+Ecmascript file had an error
+  39 |
+  40 | // components/CoreValues.jsx
+> 41 | export const CoreValues = () => {
+     |              ^^^^^^^^^^
+  42 |     const values = [
+  43 |       {
+  44 |         icon: (
+
+the name `CoreValues` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/CoreValues.jsx
+    ./src/app/about/page.js
+[22:45:02.278] Browser ERROR   ./src/app/components/MissionVision.jsx:48:14
+Ecmascript file had an error
+  46 |
+  47 | // components/MissionVision.jsx
+> 48 | export const MissionVision = () => {
+     |              ^^^^^^^^^^^^^
+  49 |     return (
+  50 |       <section className="relative py-12 lg:py-20 xl:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100/50 overflow-hidden">
+  51 |         {/* Background Elements - Reduced on mobile */}
+
+the name `MissionVision` is defined multiple times
+
+Import trace:
+  Server Component:
+    ./src/app/components/MissionVision.jsx
+    ./src/app/about/page.js

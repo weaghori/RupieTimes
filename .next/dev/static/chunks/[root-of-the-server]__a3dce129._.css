@@ -1607,6 +1607,10 @@
     background-color: #e5e7eb;
   }
 
+  .bg-\[\#E6E6E6CF\] {
+    background-color: #e6e6e6cf;
+  }
+
   .bg-\[\#E6E6E6\] {
     background-color: #e6e6e6;
   }
@@ -2315,6 +2319,10 @@
     color: var(--color-gray-700);
   }
 
+  .text-gray-800 {
+    color: var(--color-gray-800);
+  }
+
   .text-gray-900 {
     color: var(--color-gray-900);
   }
@@ -2760,6 +2768,12 @@
   @media (hover: hover) {
     .hover\:text-\[\#00301F\]:hover {
       color: #00301f;
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-\[\#C0934B\]:hover {
+      color: #c0934b;
     }
   }
 
@@ -3420,6 +3434,12 @@
   @media (min-width: 64rem) {
     .lg\:relative {
       position: relative;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:z-0 {
+      z-index: 0;
     }
   }
 

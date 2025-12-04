@@ -165,20 +165,34 @@ const ArticleView = ({ article }) => {
             </div>
 
             {/* Article Footer */}
-            <div className="bg-[#C0934B] rounded-[15px] p-8 text-center mt-12 text-white">
-               <div className="flex justify-center gap-6 mb-6">
+            <div className="rounded-[15px] overflow-hidden mt-12 font-sans">
+               {/* Top Section: Social Icons */}
+               <div className="bg-[#C0934B] py-6 flex justify-center gap-8 text-white">
                  <FaFacebookF className="w-6 h-6 cursor-pointer hover:text-black transition-colors" />
                  <FaInstagram className="w-6 h-6 cursor-pointer hover:text-black transition-colors" />
                  <FaYoutube className="w-6 h-6 cursor-pointer hover:text-black transition-colors" />
                </div>
-               <p className="mb-4 text-sm">
-                 Written By <span className="underline cursor-pointer">Lucy Brewster</span>, <span className="underline cursor-pointer">Sissy Yan</span>, And <span className="underline cursor-pointer">Mark Reeth</span>
-               </p>
-               <p className="mb-8 text-sm">
-                 Was This Email Forwarded To You? Sign Up <span className="underline cursor-pointer">Here</span>.
-               </p>
-               <div className="border-t border-white/30 pt-4 text-xs">
-                 &copy; 2025 RUPIE TIMES All rights reserved.
+               
+               {/* Bottom Section: Content */}
+               <div className="bg-[#E6E6E6CF] p-8 text-center text-black">
+                 {article.footer && (
+                   <>
+                     <p className="mb-4 text-sm font-medium">
+                       Written By {article.footer.authors.map((author, index) => (
+                         <React.Fragment key={index}>
+                           <span className="underline cursor-pointer hover:text-[#C0934B]">{author.name}</span>
+                           {index < article.footer.authors.length - 2 ? ", " : index === article.footer.authors.length - 2 ? ", And " : ""}
+                         </React.Fragment>
+                       ))}
+                     </p>
+                     <p className="mb-8 text-sm font-medium">
+                       {article.footer.signup.text} <span className="underline cursor-pointer hover:text-[#C0934B]">{article.footer.signup.linkText}</span>.
+                     </p>
+                     <div className="border-t border-gray-300 pt-4 text-xs font-bold text-gray-800">
+                       {article.footer.copyright}
+                     </div>
+                   </>
+                 )}
                </div>
             </div>
 
@@ -186,7 +200,7 @@ const ArticleView = ({ article }) => {
 
           {/* Sidebar (40%) */}
           <div className={`
-            fixed inset-0 z-50 bg-white transform transition-transform duration-300 lg:relative lg:translate-x-0 lg:w-[40%] lg:block lg:bg-transparent
+            fixed inset-0 z-50 lg:z-0 bg-white transform transition-transform duration-300 lg:relative lg:translate-x-0 lg:w-[40%] lg:block lg:bg-transparent
             ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}
           `}>
              <div className="h-full overflow-y-auto p-6 lg:p-0 lg:pl-8">
