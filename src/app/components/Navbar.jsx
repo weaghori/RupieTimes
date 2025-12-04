@@ -8,7 +8,7 @@ import logo from "../assets/logo.svg";
 const NAV_ITEMS = [
   { name: "Rupie Talk", href: "/rupiesTimeTalk" },
   { name: "Advertise With US", href: "/news" },
-  { name: "Our Products", href: "/insights" },
+  { name: "Our Products", href: "/products" },
   { name: "About Us", href: "/about" },
   { name: "Contact Us", href: "/contactUs" },
 ];

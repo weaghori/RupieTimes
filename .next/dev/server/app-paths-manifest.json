@@ -2,5 +2,7 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/about/page": "app/about/page.js",
   "/auth/page": "app/auth/page.js",
-  "/page": "app/page.js"
+  "/insights/page": "app/insights/page.js",
+  "/page": "app/page.js",
+  "/products/page": "app/products/page.js"
 }
