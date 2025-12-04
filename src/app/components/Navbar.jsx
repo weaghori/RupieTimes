@@ -192,7 +192,8 @@ export default function Navbar() {
           </button>
 
           {/* User/Login Icon */}
-          <button
+          <Link
+            href="/auth"
             className="flex items-center justify-center rounded-md p-2 text-black hover:bg-slate-100/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition"
             aria-label="Login"
           >
@@ -208,7 +209,7 @@ export default function Navbar() {
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
               <circle cx="12" cy="7" r="4" />
             </svg>
-          </button>
+          </Link>
 
           {/* Take a Trial Button */}
           <Link
@@ -268,7 +269,8 @@ export default function Navbar() {
             </button>
 
             {/* User/Login Icon */}
-            <button
+            <Link
+              href="/auth"
               className="flex items-center justify-center rounded-md p-2 text-black hover:bg-slate-100/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition"
               aria-label="Login"
             >
@@ -284,7 +286,7 @@ export default function Navbar() {
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                 <circle cx="12" cy="7" r="4" />
               </svg>
-            </button>
+            </Link>
 
             <Link
               href="/trial"
